@@ -41,7 +41,7 @@ public class CollectorModel {
     public String toString() {
         return "{" +
                 "\"id\":\"" + id + "\"" +
-                ", \"name\":" + name + "\"" +
+                ", \"name\":\"" + name + "\"" +
                 ", \"address\":\"" + address + "\"" +
                 ", \"contact\":\"" + contact + "\"" +
                 "}";

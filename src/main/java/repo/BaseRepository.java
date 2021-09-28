@@ -44,7 +44,8 @@ public abstract class BaseRepository<T> {
     }
 
     public int Add(T model) throws Exception{
-        return executeStatement(getInsertStatement(model));
+        String stmt= getInsertStatement(model);
+        return executeStatement(stmt);
     }
 
     public int Update(T model) throws Exception{
@@ -54,7 +55,8 @@ public abstract class BaseRepository<T> {
     public abstract T MapData(ResultSet rs) throws  Exception;
 
     public BaseModelList<T> GetAll() throws Exception{
-        ResultSet rs = executeQuery(getSelectStatement());
+        String stmt = getSelectStatement();
+        ResultSet rs = executeQuery(stmt);
 
         BaseModelList<T> modelList = new BaseModelList<T>();
         //STEP 5: Extract data from result set

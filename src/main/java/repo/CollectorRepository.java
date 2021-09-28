@@ -10,8 +10,8 @@ public class CollectorRepository extends BaseRepository<CollectorModel> {
 
     @Override
     public String getInsertStatement(CollectorModel model){
-        return  "INSERT INTO collector(id,name,address,contact)" +
-                "VALUES ("+model.id + ",'"+ model.name +"','"+ model.address + "','"+ model.contact + "')";
+        String query = "INSERT INTO collector (id, name,address,contact) VALUES ("+ model.id +",'"+ model.name +"','"+ model.address + "','"+ model.contact + "')";
+        return  query;
     }
 
     @Override

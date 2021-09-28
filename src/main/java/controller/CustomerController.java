@@ -12,9 +12,7 @@ public class CustomerController extends BaseController<CustomerModel>{
         service = new CustomerService();
     }
 
-    public BaseModelList<CustomerModel> getAll(){
-        return service.getAll();
-    }
+
     public BaseModelList<ApiPath> setupPath() {
         BaseModelList<ApiPath> pathList = new BaseModelList<ApiPath>();
 
@@ -32,6 +30,10 @@ public class CustomerController extends BaseController<CustomerModel>{
 
         return pathList;
     }
+    public BaseModelList<CustomerModel> getAll(){
+        return service.getAll();
+    }
+
     @Override
     public int add(CustomerModel model){
         return service.Add(model);

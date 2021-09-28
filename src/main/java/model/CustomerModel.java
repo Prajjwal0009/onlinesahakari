@@ -89,10 +89,10 @@ public class CustomerModel implements BaseModel {
     public String toString() {
         return "{" +
                 "\"id\":\"" + id + "\"" +
-                ", \"name\":" + name + "\"" +
+                ", \"name\":\"" + name + "\"" +
                 ", \"address\":\"" + address + "\"" +
                 ", \"contact\":\"" + contact + "\"" +
-                ", \"area\":\"" + area.toString() + "\"" +
+                ", \"areaId\":\"" + areaId + "\"" +
                 ", \"startDate\":\"" + startDate + "\"" +
                 ", \"endDate\":\"" + endDate + "\"" +
                 ", \"isActive\":\"" + isActive + "\"" +

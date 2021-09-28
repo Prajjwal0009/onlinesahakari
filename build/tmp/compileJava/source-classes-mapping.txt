@@ -1,66 +1,66 @@
-repo/CollectorRepository.java
- repo.CollectorRepository
-model/CustomerModel.java
- model.CustomerModel
-model/BaseModel.java
- model.BaseModel
-model/CollectionModel.java
- model.CollectionModel
-model/CollectorAreaMapping.java
- model.CollectorAreaMapping
-model/BaseModelList.java
- model.BaseModelList
-Utility.java
- Utility
-repo/BaseRepository.java
- repo.BaseRepository
-model/PathType.java
- model.PathType
-model/CollectorModel.java
- model.CollectorModel
-repo/CollectionRepository.java
- repo.CollectionRepository
-services/CollectionService.java
- services.CollectionService
-controller/BaseController.java
- controller.BaseController
-services/UserService.java
- services.UserService
-services/BaseService.java
- services.BaseService
-controller/CollectorAreaMappingController.java
- controller.CollectorAreaMappingController
-services/AreaModelService.java
- services.AreaModelService
-services/CollectorService.java
- services.CollectorService
-controller/CollectorController.java
- controller.CollectorController
 model/UserModel.java
  model.UserModel
-repo/AreaModelRepository.java
- repo.AreaModelRepository
-repo/CollectorAreaMappingRepository.java
- repo.CollectorAreaMappingRepository
-services/CollectorAreaMappingService.java
- services.CollectorAreaMappingService
+model/BaseModel.java
+ model.BaseModel
 model/ApiPath.java
  model.ApiPath
-controller/CollectionController.java
- controller.CollectionController
-controller/AreaModelController.java
- controller.AreaModelController
 model/AreaModel.java
  model.AreaModel
+Utility.java
+ Utility
+model/CustomerModel.java
+ model.CustomerModel
+model/BaseModelList.java
+ model.BaseModelList
+controller/BaseController.java
+ controller.BaseController
+model/PathType.java
+ model.PathType
+model/CollectorAreaMapping.java
+ model.CollectorAreaMapping
+model/CollectorModel.java
+ model.CollectorModel
+repo/CustomerRepository.java
+ repo.CustomerRepository
+Entry.java
+ Entry
+services/CustomerService.java
+ services.CustomerService
+repo/BaseRepository.java
+ repo.BaseRepository
 controller/UserController.java
  controller.UserController
 repo/UserRepository.java
  repo.UserRepository
+services/CollectorAreaMappingService.java
+ services.CollectorAreaMappingService
+repo/CollectorRepository.java
+ repo.CollectorRepository
+repo/AreaModelRepository.java
+ repo.AreaModelRepository
+services/CollectorService.java
+ services.CollectorService
+services/BaseService.java
+ services.BaseService
+services/UserService.java
+ services.UserService
+controller/AreaModelController.java
+ controller.AreaModelController
+controller/CollectorController.java
+ controller.CollectorController
 controller/CustomerController.java
  controller.CustomerController
-repo/CustomerRepository.java
- repo.CustomerRepository
-services/CustomerService.java
- services.CustomerService
-Entry.java
- Entry
+controller/CollectorAreaMappingController.java
+ controller.CollectorAreaMappingController
+repo/CollectorAreaMappingRepository.java
+ repo.CollectorAreaMappingRepository
+services/AreaModelService.java
+ services.AreaModelService
+controller/CollectionController.java
+ controller.CollectionController
+model/CollectionModel.java
+ model.CollectionModel
+services/CollectionService.java
+ services.CollectionService
+repo/CollectionRepository.java
+ repo.CollectionRepository

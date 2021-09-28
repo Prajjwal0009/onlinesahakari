@@ -25,14 +25,14 @@ public class CollectorService {
         }
         return null;
     }
-    public int Add(CollectorModel model){
+    public int Add(CollectorModel model) throws Exception{
         try {
             return repo.Add(model);
         }
         catch (Exception ex){
-
+            throw ex;
         }
-        return -1;
+       // return -1;
     }
     public int Update(CollectorModel model){
         try {

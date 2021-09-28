@@ -3,6 +3,8 @@ package repo;
 import model.AreaModel;
 import model.CustomerModel;
 import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class CustomerRepository extends BaseRepository<CustomerModel> {
 
@@ -11,17 +13,26 @@ public class CustomerRepository extends BaseRepository<CustomerModel> {
 
     @Override
     public String getInsertStatement(CustomerModel model){
-        return  "INSERT INTO customer (id,name,address,contact,areaId, startDate,endDate,isActive) " +
-                "VALUES ("+ model.id + ",'"+ model.name +"','"+ model.address + "','"+ model.contact + "',"+ model.areaId + ",'"+ model.startDate + "','"+ model.endDate + "','"+ model.isActive + "')";
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
+        return  "INSERT INTO customer (id,name,address,contact,areaId, startDate,endDate,isActive) VALUES ("
+                + model.id + ",'"
+                + model.name +"','"
+                + model.address + "','"
+                + model.contact + "','"
+                + model.areaId + "','"
+                + format.format(model.startDate) + "','"
+                + format.format(model.endDate) + "',"
+                + model.isActive + ")";
     }
 
     @Override
     public String getUpdateStatement(CustomerModel model){
-        return  "UPDATE customer SET name = '" + model.name + ",'"+
-                "address='"+ model.address +"','\"+\n" +
-                "contact='"+ model.contact +"','\"+\n" +
-                "areaId='"+ model.areaId +"','\"+\n" +
-                "endDate='"+ model.endDate +"','\"+\n" +
+        return  "UPDATE customer SET name = '" + model.name + "',"+
+                "address='"+ model.address +"',\"+\n" +
+                "contact='"+ model.contact +"',\"+\n" +
+                "areaId='"+ model.areaId +"',\"+\n" +
+                "endDate='"+ model.endDate +"',\"+\n" +
                 "startDate='"+ model.startDate +"'" +
                 "isActive='"+ model.isActive +"','\"+\n" +" WHERE id = "+ model.id + "";
     }
@@ -57,8 +68,11 @@ public class CustomerRepository extends BaseRepository<CustomerModel> {
         customer.setEndDate(rs.getDate("endDate"));
         customer.setActive(rs.getBoolean("isActive"));
         customer.setAreaId(rs.getInt("areaId"));
+        /*
         if(customer.getAreaId() > 0)
             customer.setArea(getArea(customer.getAreaId()));
+
+         */
         return customer;
     }
 

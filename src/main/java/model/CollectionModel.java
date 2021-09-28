@@ -60,11 +60,11 @@ public class CollectionModel {
     public String toString() {
         return "{" +
                 "\"id\":\"" + id + "\"" +
-                ", \"amount\":" + amount + "\"" +
+                ", \"amount\":\"" + amount + "\"" +
                 ", \"collectionDate\":\"" + collectionDate + "\"" +
-                ", \"collectorId\":" + collectorId + "\"" +
-                ", \"customer\":" + customerId + "\"" +
-                ", \"receivedBy\":" + receivedBy + "\"" +
+                ", \"collectorId\":\"" + collectorId + "\"" +
+                ", \"customerId\":\"" + customerId + "\"" +
+                ", \"receivedBy\":\"" + receivedBy + "\"" +
                 "}";
     }
 

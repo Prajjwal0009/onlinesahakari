@@ -42,7 +42,7 @@ public class UserModel {
     public String toString() {
         return "{" +
                 "\"id\":\"" + id + "\"" +
-                ", \"userName\":" + userName + "\"" +
+                ", \"userName\":\"" + userName + "\"" +
                 ", \"password\":\"" + password + "\"" +
                 ", \"displayName\":\"" + displayName + "\"" +
                 "}";

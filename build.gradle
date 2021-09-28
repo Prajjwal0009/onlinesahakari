@@ -14,7 +14,6 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
     compile 'com.sparkjava:spark-core:2.3'
     compile 'com.google.code.gson:gson:2.8.6'
-    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.10.Final'
     runtime group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
     runtime('org.glassfish.jaxb:jaxb-runtime:2.3.0', 'javax.activation:activation:1.1.1')
 }
