@@ -1,6 +1,10 @@
 import com.google.gson.Gson;
 import controller.*;
 import model.AreaModel;
+import spark.Request;
+import spark.Response;
+import spark.Route;
+import spark.Spark;
 
 import static spark.Spark.*;
 
@@ -22,11 +26,10 @@ public class Entry {
                     accessControlRequestMethod); }
 
             return "OK"; });
-
         before((request, response) -> response.header("Access-Control-Allow-Origin",
                 "*"));
 
-        port(1234);
+
         Utility.Register(new CollectorController());
         Utility.Register(new CustomerController());
         Utility.Register(new CollectionController());
@@ -36,4 +39,5 @@ public class Entry {
 
 
     }
+
 }

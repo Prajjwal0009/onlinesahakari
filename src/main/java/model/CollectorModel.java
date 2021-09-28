@@ -4,6 +4,16 @@ public class CollectorModel {
     public String name;
     public String address;
 
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
+    public String contact;
+
     public int getId() {
         return id;
     }
@@ -31,8 +41,9 @@ public class CollectorModel {
     public String toString() {
         return "{" +
                 "\"id\":\"" + id + "\"" +
-                ", \"name\":" + name + "\"" +
+                ", \"name\":\"" + name + "\"" +
                 ", \"address\":\"" + address + "\"" +
+                ", \"contact\":\"" + contact + "\"" +
                 "}";
     }
 }

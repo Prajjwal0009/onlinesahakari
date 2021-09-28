@@ -1,11 +1,6 @@
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity
 public class AreaModel implements BaseModel {
-    @Id
     public int areaId;
     public String name;
     public String description;

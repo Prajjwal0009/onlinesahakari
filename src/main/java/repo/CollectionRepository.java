@@ -3,6 +3,7 @@ package repo;
 import model.CollectionModel;
 
 import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
 
 public class CollectionRepository extends BaseRepository<CollectionModel> {
 
@@ -10,8 +11,14 @@ public class CollectionRepository extends BaseRepository<CollectionModel> {
     }
     @Override
     public String getInsertStatement(CollectionModel model){
-        return  "INSERT INTO collection(id,collectorId,customerId,collectionDate,amount,receivedBy) " +
-                "VALUES ("+ model.id + ","+ model.collectorId +","+ model.customerId + ",'"+ model.collectionDate + "',"+ model.amount + ",'"+ model.receivedBy + "')";
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        return  "INSERT INTO collection(id,collectorId,customerId,collectionDate,amount,receivedBy) VALUES ("
+                + model.id + ",'"
+                + model.collectorId +"','"
+                + model.customerId + "','"
+                + format.format(model.collectionDate) + "','"
+                + model.amount + "','"
+                + model.receivedBy + "')";
     }
     @Override
     public String getUpdateStatement(CollectionModel model){

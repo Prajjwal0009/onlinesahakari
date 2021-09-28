@@ -39,7 +39,12 @@ public class CollectorController extends BaseController<CollectorModel> {
 
     @Override
     public int add(CollectorModel model) {
-        return service.Add(model);
+        try {
+            return service.Add(model);
+        }
+        catch (Exception ex){
+            return -1;
+        }
     }
 
     @Override
